@@ -3,13 +3,8 @@ const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "**",
-      },
-    ],
-    domains: ['www.material-tailwind.com'],
+    loader: 'custom',
+    loaderFile: './image-loader.js',
   },
   webpack(config) {
     config.module.rules.push({

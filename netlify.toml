@@ -1,14 +1,10 @@
 [build]
   command = "npm run build"
   publish = "out"
-  environment = { NODE_VERSION = "18" }
 
 [build.environment]
-  NETLIFY_SITE_ID = "6a62bb23-18a4-40bd-9d70-99eaccd29790"
-  NEXT_PUBLIC_SITE_URL = "https://kelly-nunez-portfolio.netlify.app"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+  NODE_VERSION = "18"
+  NEXT_TELEMETRY_DISABLED = "1"
 
 [[redirects]]
   from = "/*"
