@@ -10,19 +10,19 @@ interface ProjectImage {
 const PROJECT_IMAGES: ProjectImage[] = [
   {
     src: "/images/portfolio.jpg",
-    alt: "Portfolio Design - Cover"
+    alt: "Portfolio - Cover"
   },
   {
     src: "/images/projects/portfolio/2.jpg",
-    alt: "Portfolio Design - Projects Grid"
+    alt: "Portfolio - Projects Grid"
   },
   {
     src: "/images/projects/portfolio/3.jpg",
-    alt: "Portfolio Design - Project Detail"
+    alt: "Portfolio - Project Detail"
   },
   {
     src: "/images/projects/portfolio/4.jpg",
-    alt: "Portfolio Design - Mobile View"
+    alt: "Portfolio - Mobile View"
   }
 ];
 
