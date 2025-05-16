@@ -1,0 +1,25 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+  environment = { NODE_VERSION = "18" }
+
+[build.environment]
+  NETLIFY_SITE_ID = "6a62bb23-18a4-40bd-9d70-99eaccd29790"
+  NEXT_PUBLIC_SITE_URL = "https://kelly-nunez-portfolio.netlify.app"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[context.production]
+  command = "npm run build"
+
+[context.deploy-preview]
+  command = "npm run build"
+
+[context.branch-deploy]
+  command = "npm run build" 
