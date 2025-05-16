@@ -176,13 +176,27 @@ html {
   animation-delay: 6s;
 }
 
-.hero-title {
-  @apply text-4xl lg:text-5xl font-bold;
-  background: linear-gradient(90deg, #3b82f6, #1d4ed8, #60a5fa);
+/* Hero styles */
+.hero-gradient-text {
+  @apply bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent;
   background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradient 3s linear infinite;
+  animation: gradient 8s linear infinite;
+}
+
+.hero-title {
+  @apply relative;
+}
+
+.hero-title h1 {
+  @apply font-bold;
+}
+
+.hero-title h1 > div {
+  @apply transition-all duration-300;
+}
+
+.hero-title h1 > div:hover {
+  @apply transform scale-105;
 }
 
 /* Aspect Ratio */
