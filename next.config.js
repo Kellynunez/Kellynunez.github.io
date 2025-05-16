@@ -1,10 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   images: {
-    unoptimized: true,
-    loader: 'custom',
-    loaderFile: './image-loader.js',
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+    domains: ['www.material-tailwind.com'],
   },
   webpack(config) {
     config.module.rules.push({
