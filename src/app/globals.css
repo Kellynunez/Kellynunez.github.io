@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .animate-gradient {
+    background-size: 200% auto;
+    animation: gradient 4s linear infinite;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
+
 :root {
   --color-primary: #3b82f6; /* blue-500 */
   --color-secondary: #2563eb; /* blue-600 */
@@ -16,17 +35,6 @@ body {
 /* Container personalizado */
 .container {
   @apply max-w-[1140px] px-4 sm:px-6 lg:px-8;
-}
-
-@keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.animate-gradient {
-  background-size: 200% auto;
-  animation: gradient 8s linear infinite;
 }
 
 @keyframes float {
