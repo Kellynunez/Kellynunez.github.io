@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
@@ -16,6 +18,8 @@ const nextConfig = {
     });
     return config;
   },
+  basePath: '',
+  assetPrefix: '',
 };
 
 module.exports = nextConfig;
