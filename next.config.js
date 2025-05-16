@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   images: {
-    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
@@ -10,6 +8,7 @@ const nextConfig = {
       },
     ],
     domains: ['www.material-tailwind.com'],
+    unoptimized: true,
   },
   webpack(config) {
     config.module.rules.push({
@@ -18,8 +17,7 @@ const nextConfig = {
     });
     return config;
   },
-  basePath: '',
-  assetPrefix: '',
+  output: 'standalone',
 };
 
 module.exports = nextConfig;

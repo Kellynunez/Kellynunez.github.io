@@ -1,6 +1,5 @@
 "use client";
 
-import { Typography } from "@material-tailwind/react";
 import {
   RectangleGroupIcon,
   FingerPrintIcon,
@@ -57,19 +56,16 @@ export function Skills() {
       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-cyan-500/10 pointer-events-none" />
       
       <div className="container mx-auto mb-20 text-center relative">
-        <Typography color="white" className="mb-2 font-bold uppercase tracking-wider gradient-text">
+        <p className="mb-2 font-bold uppercase tracking-wider gradient-text text-white">
           mis habilidades
-        </Typography>
-        <Typography variant="h1" color="white" className="mb-4 gradient-text">
+        </p>
+        <h1 className="mb-4 text-4xl font-bold gradient-text text-white">
           Experiencia Profesional
-        </Typography>
-        <Typography
-          variant="lead"
-          className="mx-auto w-full text-white/80 lg:w-10/12 transition-modern hover:text-white"
-        >
+        </h1>
+        <p className="mx-auto w-full text-white/80 lg:w-10/12 transition-modern hover:text-white text-xl">
           Combino una visión estratégica con habilidades técnicas avanzadas, incluyendo un profundo conocimiento
           de frameworks y herramientas de diseño y desarrollo web modernas.
-        </Typography>
+        </p>
       </div>
       <div className="container mx-auto grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 relative">
         {SKILLS.map((props, idx) => (

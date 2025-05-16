@@ -9,16 +9,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "export": "next build",
     "lint": "next lint"
   },
   "dependencies": {
     "@heroicons/react": "2.0.18",
     "@material-tailwind/react": "^2.1.10",
-    "next": "13.4.0",
+    "next": "^15.3.2",
     "react": "18",
     "react-dom": "18"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.11.1",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "20",
     "@types/react": "18",

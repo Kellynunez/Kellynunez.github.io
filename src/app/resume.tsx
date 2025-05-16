@@ -1,6 +1,5 @@
 "use client";
 
-import { Typography, Button } from "@material-tailwind/react";
 import {
   ChartBarIcon,
   PuzzlePieceIcon,
@@ -29,17 +28,15 @@ export function Resume() {
     <section id="experience" className="px-8 py-24 bg-gray-900">
       <div className="container mx-auto grid w-full grid-cols-1 items-center gap-16 lg:grid-cols-2">
         <div className="col-span-1">
-          <Typography variant="h2" color="white">
+          <h2 className="text-3xl font-bold text-white">
             Mi Experiencia
-          </Typography>
-          <Typography className="mb-4 mt-3 w-9/12 font-normal !text-gray-400">
+          </h2>
+          <p className="mb-4 mt-3 w-9/12 font-normal text-gray-400">
             Líder creativa multidisciplinaria con más de 10 años de experiencia en diseño estratégico de marca,
             diseño UI/UX y desarrollo web frontend. Especializada en la creación de productos digitales de alto impacto.
-          </Typography>
-          <Button
-            variant="text"
-            color="white"
-            className="flex items-center gap-2"
+          </p>
+          <button
+            className="flex items-center gap-2 text-white hover:bg-white/10 px-4 py-2 rounded-lg transition-colors"
             onClick={() => window.location.href = 'https://www.linkedin.com/in/kellynunezh'}
           >
             Ver más en LinkedIn
@@ -47,7 +44,7 @@ export function Resume() {
               strokeWidth={3}
               className="h-3.5 w-3.5 text-white"
             />
-          </Button>
+          </button>
         </div>
         <div className="col-span-1 grid gap-y-6 lg:ml-auto pr-0 lg:pr-12 xl:pr-32">
           {RESUME_ITEMS.map((props, idx) => (

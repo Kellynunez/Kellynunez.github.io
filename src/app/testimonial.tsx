@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import { Typography, Card, CardBody, Avatar } from "@material-tailwind/react";
 
 export function Testimonial() {
   const [active, setActive] = React.useState(3);
@@ -11,74 +10,76 @@ export function Testimonial() {
     <section id="testimonials" className="py-12 px-8 lg:py-24">
       <div className="container max-w-screen-lg mx-auto">
         <div className="container mx-auto mb-20 text-center">
-          <Typography variant="h2" color="blue-gray" className="mb-4">
+          <h2 className="mb-4 text-3xl font-bold text-blue-gray-900">
             What Clients Say
-          </Typography>
-          <Typography
-            variant="lead"
-            className="mx-auto w-full px-4 font-normal !text-gray-500 lg:w-8/12"
-          >
+          </h2>
+          <p className="mx-auto w-full px-4 font-normal text-gray-500 lg:w-8/12 text-lg">
             Discover what clients have to say about their experiences working
             with me. My client&apos;s satisfaction is my greatest achievement!
-          </Typography>
+          </p>
         </div>
-        <Card color="transparent" shadow={false} className="py-8 lg:flex-row">
-          <CardBody className="w-full lg:gap-10 h-full lg:!flex justify-between ">
+        <div className="bg-transparent shadow-none py-8 lg:flex-row">
+          <div className="w-full lg:gap-10 h-full lg:!flex justify-between">
             <div className="w-full mb-10 lg:mb-0">
-              <Typography
-                variant="h3"
-                color="blue-gray"
-                className="mb-4 font-bold lg:max-w-xs"
-              >
+              <h3 className="mb-4 font-bold lg:max-w-xs text-2xl text-blue-gray-900">
                 Mobile App Development
-              </Typography>
-              <Typography className="mb-3 w-full lg:w-8/12 font-normal !text-gray-500">
+              </h3>
+              <p className="mb-3 w-full lg:w-8/12 font-normal text-gray-500">
                 I had the pleasure of working with Lily on a critical web
                 development project, and I can confidently say that their
                 expertise and professionalism exceeded my expectations.
-              </Typography>
-              <Typography variant="h6" color="blue-gray" className="mb-0.5">
+              </p>
+              <h6 className="mb-0.5 text-lg font-semibold text-blue-gray-900">
                 Michael - Technical Manager
-              </Typography>
-              <Typography
-                variant="small"
-                className="font-normal mb-5 !text-gray-500"
-              >
+              </h6>
+              <p className="font-normal mb-5 text-sm text-gray-500">
                 Marketing @ APPLE INC.
-              </Typography>
+              </p>
               <div className="flex items-center gap-4">
-                <Avatar
-                  variant="rounded"
-                  src="/image/avatar1.jpg"
-                  alt="spotify"
-                  size="sm"
-                  className={`cursor-pointer ${
+                <button
+                  className={`w-10 h-10 rounded-lg overflow-hidden cursor-pointer transition-opacity ${
                     active === 1 ? "opacity-100" : "opacity-50"
                   }`}
                   onClick={() => setActive(1)}
-                />
-                <div className="w-[1px] h-[36px] bg-blue-gray-100 "></div>
-                <Avatar
-                  variant="rounded"
-                  src="/image/avatar2.jpg"
-                  alt="spotify"
-                  size="sm"
-                  className={`cursor-pointer ${
+                >
+                  <Image
+                    width={40}
+                    height={40}
+                    src="/image/avatar1.jpg"
+                    alt="testimonial 1"
+                    className="w-full h-full object-cover"
+                  />
+                </button>
+                <div className="w-[1px] h-[36px] bg-blue-gray-100"></div>
+                <button
+                  className={`w-10 h-10 rounded-lg overflow-hidden cursor-pointer transition-opacity ${
                     active === 2 ? "opacity-100" : "opacity-50"
                   }`}
                   onClick={() => setActive(2)}
-                />
+                >
+                  <Image
+                    width={40}
+                    height={40}
+                    src="/image/avatar2.jpg"
+                    alt="testimonial 2"
+                    className="w-full h-full object-cover"
+                  />
+                </button>
                 <div className="w-[1px] h-[36px] bg-blue-gray-100" />
-                <Avatar
-                  variant="rounded"
-                  src="/image/avatar3.jpg"
-                  alt="spotify"
-                  size="sm"
-                  className={`cursor-pointer ${
+                <button
+                  className={`w-10 h-10 rounded-lg overflow-hidden cursor-pointer transition-opacity ${
                     active === 3 ? "opacity-100" : "opacity-50"
                   }`}
                   onClick={() => setActive(3)}
-                />
+                >
+                  <Image
+                    width={40}
+                    height={40}
+                    src="/image/avatar3.jpg"
+                    alt="testimonial 3"
+                    className="w-full h-full object-cover"
+                  />
+                </button>
               </div>
             </div>
             <div className="h-[21rem] rounded-lg w-full sm:w-[18rem] shrink-0">
@@ -90,8 +91,8 @@ export function Testimonial() {
                 className="h-full rounded-lg w-full object-cover"
               />
             </div>
-          </CardBody>
-        </Card>
+          </div>
+        </div>
       </div>
     </section>
   );
