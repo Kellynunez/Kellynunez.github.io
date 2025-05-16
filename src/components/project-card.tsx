@@ -1,22 +1,16 @@
 import Image from "next/image";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  Typography,
-  Button,
-} from "@material-tailwind/react";
 
 interface ProjectCardProps {
   img: string;
   title: string;
   desc: string;
+  className?: string;
 }
 
-export function ProjectCard({ img, title, desc }: ProjectCardProps) {
+export function ProjectCard({ img, title, desc, className = "" }: ProjectCardProps) {
   return (
-    <Card color="transparent" shadow={false}>
-      <CardHeader floated={false} className="mx-0 mt-0 mb-6 h-48">
+    <div className={`bg-transparent ${className}`}>
+      <div className="mx-0 mt-0 mb-6 h-48 overflow-hidden">
         <Image
           src={img}
           alt={title}
@@ -24,24 +18,26 @@ export function ProjectCard({ img, title, desc }: ProjectCardProps) {
           height={768}
           className="h-full w-full object-cover"
         />
-      </CardHeader>
-      <CardBody className="p-0">
+      </div>
+      <div className="p-0">
         <a
           href="#"
           className="text-blue-gray-900 transition-colors hover:text-gray-800"
         >
-          <Typography variant="h5" className="mb-2">
+          <h5 className="mb-2 text-xl font-semibold">
             {title}
-          </Typography>
+          </h5>
         </a>
-        <Typography className="mb-6 font-normal !text-gray-500">
+        <p className="mb-6 font-normal text-gray-500">
           {desc}
-        </Typography>
-        <Button color="gray" size="sm">
-          see details
-        </Button>
-      </CardBody>
-    </Card>
+        </p>
+        <button 
+          className="px-4 py-2 text-sm font-medium bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
+        >
+          ver detalles
+        </button>
+      </div>
+    </div>
   );
 }
 

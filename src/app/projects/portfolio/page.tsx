@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { Typography } from "@material-tailwind/react";
 
 interface ProjectImage {
   src: string;
@@ -33,13 +32,13 @@ export default function PortfolioProject() {
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <Typography variant="h1" color="blue-gray" className="mb-4 text-4xl md:text-5xl font-bold">
+          <h1 className="mb-4 text-4xl md:text-5xl font-bold text-blue-gray-900">
             Portfolio Design
-          </Typography>
-          <Typography variant="lead" color="gray" className="text-gray-700">
+          </h1>
+          <p className="text-xl text-gray-700">
             Diseño y desarrollo de un portafolio digital moderno y minimalista que destaca
             proyectos creativos a través de una experiencia visual inmersiva.
-          </Typography>
+          </p>
         </div>
       </div>
 
@@ -64,30 +63,30 @@ export default function PortfolioProject() {
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           <div>
-            <Typography variant="h3" color="blue-gray" className="mb-6 text-2xl font-bold">
+            <h3 className="mb-6 text-2xl font-bold text-blue-gray-900">
               Sobre el Proyecto
-            </Typography>
-            <Typography color="gray" className="text-gray-700 mb-6">
+            </h3>
+            <p className="text-gray-700 mb-6">
               Este proyecto de portafolio digital fue diseñado y desarrollado con el objetivo
               de crear una plataforma moderna y minimalista que destaque el trabajo creativo
               de manera efectiva. El diseño se centra en la experiencia del usuario,
               permitiendo una navegación intuitiva y una presentación visual impactante.
-            </Typography>
-            <Typography color="gray" className="text-gray-700">
+            </p>
+            <p className="text-gray-700">
               La interfaz utiliza una combinación de tipografía clara, espacios blancos
               estratégicos y transiciones suaves para crear una experiencia de usuario
               fluida y profesional.
-            </Typography>
+            </p>
           </div>
           <div>
-            <Typography variant="h3" color="blue-gray" className="mb-6 text-2xl font-bold">
+            <h3 className="mb-6 text-2xl font-bold text-blue-gray-900">
               Detalles Técnicos
-            </Typography>
+            </h3>
             <div className="space-y-4">
               <div>
-                <Typography variant="h6" color="blue-gray" className="font-semibold mb-2">
+                <h6 className="font-semibold mb-2 text-blue-gray-900">
                   Tecnologías Utilizadas
-                </Typography>
+                </h6>
                 <ul className="list-disc list-inside text-gray-700">
                   <li>Next.js y React</li>
                   <li>Tailwind CSS</li>
@@ -97,9 +96,9 @@ export default function PortfolioProject() {
                 </ul>
               </div>
               <div>
-                <Typography variant="h6" color="blue-gray" className="font-semibold mb-2">
+                <h6 className="font-semibold mb-2 text-blue-gray-900">
                   Características Principales
-                </Typography>
+                </h6>
                 <ul className="list-disc list-inside text-gray-700">
                   <li>Diseño Responsivo</li>
                   <li>Animaciones Suaves</li>

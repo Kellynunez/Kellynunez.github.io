@@ -1,7 +1,6 @@
 "use client";
 
 import { ProjectCard } from "@/components";
-import { Typography } from "@material-tailwind/react";
 
 const PROJECTS = [
   {
@@ -33,16 +32,13 @@ export function Projects() {
       <div className="absolute inset-0 bg-gradient-to-bl from-blue-500/10 via-transparent to-sky-500/10 pointer-events-none" />
       
       <div className="container mx-auto mb-20 text-center relative">
-        <Typography variant="h2" color="white" className="mb-4 gradient-text">
+        <h2 className="mb-4 gradient-text text-3xl font-bold text-white">
           Educación
-        </Typography>
-        <Typography
-          variant="lead"
-          className="mx-auto w-full px-4 font-normal text-white/80 lg:w-6/12 transition-modern hover:text-white"
-        >
+        </h2>
+        <p className="mx-auto w-full px-4 font-normal text-white/80 lg:w-6/12 transition-modern hover:text-white text-lg">
           Mi formación académica y desarrollo profesional continuo en comunicación,
           diseño y desarrollo web.
-        </Typography>
+        </p>
       </div>
       <div className="container mx-auto grid grid-cols-1 gap-x-10 gap-y-20 md:grid-cols-2 xl:grid-cols-4 relative">
         {PROJECTS.map((props, idx) => (

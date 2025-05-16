@@ -3,20 +3,18 @@ import { Card, Typography } from "@material-tailwind/react";
 interface ResumeItemProps {
   icon: React.ElementType;
   children: React.ReactNode;
+  className?: string;
 }
 
-export function ResumeItem({ icon: Icon, children }: ResumeItemProps) {
+export function ResumeItem({ icon: Icon, children, className = "" }: ResumeItemProps) {
   return (
     <div className="flex items-start gap-4">
-      <Card
-        color="gray"
-        className="h-12 w-12 shrink-0 items-center justify-center !rounded-lg"
-      >
+      <div className="h-12 w-12 shrink-0 flex items-center justify-center rounded-lg bg-gray-800">
         <Icon className="h-6 w-6" strokeWidth={2} />
-      </Card>
-      <Typography className="w-full font-normal !text-gray-500">
+      </div>
+      <p className={`w-full font-normal ${className}`}>
         {children}
-      </Typography>
+      </p>
     </div>
   );
 }
